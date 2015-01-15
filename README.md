@@ -1,21 +1,31 @@
-# Rails Auth HW
-## User and Session Setup
+#  Blog App
 
 
-## Part 1:Add Users To Your Blog App
-
-We want users to be able to sign into our blogging application, and to do this we will need to add a `user` model as well as both a `users`, and `sessions` controller to handle `/sign_up` and `/login` respectively.
-
-Use the [notes](https://github.com/sf-wdi-15/notes/tree/master/week_07_more_rails/day_1_rails_auth/dawn_auth_start) to repeat the logic required to setup the application.
-
-## Part 2: Restricting Access
-
-Add a before action to your `articles` controller to avoid people doing anything with articles unless `logged_in?`.
+It's time to make your first application with rails and you'll need to implement the following:
 
 
-## Part 3: Bonus
+## Part 1:Blog Setup
 
-* Create a `SitesController` that manages the `index`, `contact`, and `about` for your blog.
-* Add `gem 'dotenv-rails'` to your application, and put your super secret api keys inside.
-* Add a migration to save your `keywords` after you make the first `get_keywords` request.
+### An Article Model
+
+A article should have attributes `title`, `author`, and `content`.
+
+
+### Articles Routes
+
+* An index for all articles
+* A show for a single article
+* A new page to create a article
+* An edit page to edit a article
+* A route to article new articles to
+* A route article to update articles
+* A route to delete articles
+
+
+
+## Part 2: Research
+
+After completing the above you'll be using the [`typheous gem`](https://github.com/typhoeus/typhoeus) to make API requests to [Alchemy's keyword API](http://www.alchemyapi.com/api/keyword/textc.html).
+
+You'll need to play with typheous to make requests before using Alchemy. Afterward, you'll need to sign up for Alchemy's API and use the info from the link above on the text api to article blog content to the alchemy API, and get back the keywords for the blog. Then you want to display the keywords on the show page for the article.
 
